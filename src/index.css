@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Montserrat', sans-serif;
+  --radius: 0.75rem;
+  --color-primary: hsl(252, 87%, 59%);
+  --color-primary-foreground: hsl(0, 0%, 98%);
+  --color-secondary: hsl(270, 91%, 65%);
+  --color-secondary-foreground: hsl(0, 0%, 98%);
+  --color-accent: hsl(191, 97%, 77%);
+  --color-accent-foreground: hsl(240, 5.9%, 10%);
+  --color-background: hsl(0, 0%, 100%);
+  --color-foreground: hsl(240, 10%, 3.9%);
+  --color-muted: hsl(240, 4.8%, 95.9%);
+  --color-muted-foreground: hsl(240, 3.8%, 46.1%);
+  --color-border: hsl(240, 5.9%, 90%);
+  --color-ring: hsl(252, 87%, 59%);
+  --color-card: hsl(0, 0%, 100%);
+  --color-card-foreground: hsl(240, 10%, 3.9%);
+  --color-popover: hsl(0, 0%, 100%);
+  --color-popover-foreground: hsl(240, 10%, 3.9%);
+  --color-destructive: hsl(0, 84.2%, 60.2%);
+  --color-destructive-foreground: hsl(0, 0%, 98%);
+}
+
+@theme .dark {
+  --color-background: hsl(240, 10%, 3.9%);
+  --color-foreground: hsl(0, 0%, 98%);
+  --color-card: hsl(240, 10%, 3.9%);
+  --color-card-foreground: hsl(0, 0%, 98%);
+  --color-popover: hsl(240, 10%, 3.9%);
+  --color-popover-foreground: hsl(0, 0%, 98%);
+  --color-primary: hsl(252, 87%, 59%);
+  --color-primary-foreground: hsl(0, 0%, 98%);
+  --color-secondary: hsl(270, 91%, 65%);
+  --color-secondary-foreground: hsl(0, 0%, 98%);
+  --color-muted: hsl(240, 3.7%, 15.9%);
+  --color-muted-foreground: hsl(240, 5%, 64.9%);
+  --color-accent: hsl(191, 97%, 77%);
+  --color-accent-foreground: hsl(240, 5.9%, 10%);
+  --color-destructive: hsl(0, 62.8%, 30.6%);
+  --color-destructive-foreground: hsl(0, 0%, 98%);
+  --color-border: hsl(240, 3.7%, 15.9%);
+  --color-input: hsl(240, 3.7%, 15.9%);
+  --color-ring: hsl(252, 87%, 59%);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    scroll-padding-top: 80px;
+  }
+  main {
+    padding-top: var(--header-offset, 0px);
+  }
+}
+
+@layer components {
+  .text-gradient {
+    background: linear-gradient(to right, var(--color-primary), var(--color-secondary), var(--color-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+  .btn-gradient {
+    background-image: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+    transition-property: all;
+    transition-duration: 300ms;
+  }
+  .btn-gradient:hover {
+    background-image: linear-gradient(to right, var(--color-secondary), var(--color-primary));
+  }
+  .card-gradient {
+    background-image: linear-gradient(to bottom right, var(--color-background), var(--color-background), rgba(229, 231, 235, 0.3));
+  }
+  .border-gradient {
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    background-image: linear-gradient(to bottom right, rgba(139, 92, 246, 0.2), rgba(168, 85, 247, 0.2));
+    background-clip: border-box;
+  }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px);}
+  50% { transform: translateY(-20px);}
+  100% { transform: translateY(0px);}
+}
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.animate-on-scroll.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+.stagger-item:nth-child(1) { transition-delay: 0.1s; }
+.stagger-item:nth-child(2) { transition-delay: 0.2s; }
+.stagger-item:nth-child(3) { transition-delay: 0.3s; }
+.stagger-item:nth-child(4) { transition-delay: 0.4s; }
+.stagger-item:nth-child(5) { transition-delay: 0.5s; }
+.stagger-item:nth-child(6) { transition-delay: 0.6s; }
+
+.hero-title,
+.hero-subtitle,
+.hero-cta {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.hero-title.animated {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+.hero-subtitle.animated {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}
+.hero-cta.animated {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.5s;
+}
+
+.header {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  will-change: background-color, box-shadow, padding;
+}
+.header.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+.header.scrolled {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
