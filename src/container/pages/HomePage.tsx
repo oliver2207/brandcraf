@@ -5,14 +5,19 @@ import { Button } from "../../components/buttons/Buttons"
 import { Link } from "react-router-dom"
 import ServicesSection from "../../components/services/ServicesSections"
 import PortfolioPreview from "../../components/Home/PortFolio"
-import ClientSecctions from "../../components/Home/ClientSecctions"
+// import ClientSecctions from "../../components/Home/ClientSecctions"
 // import TestimonialsSection from "../../components/Testimonials/TestimonialsSections"
-import BlogPreview from "../../components/blog/BlogPreview"
+// import BlogPreview from "../../components/blog/BlogPreview"
 import CtaSection from "../../components/Home/CtaSections"
+import { useEffect } from "react"
+
 
 
 
 function HomePage() {
+  useEffect(()=>{
+    window.scroll(0,0)
+  },[])
   return (
     <>
       <HeroSection />
@@ -117,11 +122,11 @@ function HomePage() {
       {/* portafolio */}
       <PortfolioPreview />
       {/* Client Seccionrt */}
-      <ClientSecctions />
+      {/* <ClientSecctions /> */}
       {/* Testimonio */}
       {/* <TestimonialsSection /> */}
       {/* Blog */}
-      <BlogPreview />
+      {/* <BlogPreview /> */}
       {/* Cta */}
    <CtaSection/>
     </>

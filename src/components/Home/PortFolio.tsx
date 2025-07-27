@@ -4,49 +4,55 @@ import { useEffect, useRef, useState } from "react"
  
 import { useGSAP } from "../../lib/gsap-utils"
 import gsap from "gsap"
-import { ArrowRight } from "lucide-react"
+// import { ArrowRight } from "lucide-react"
 import { Card, CardContent } from "../ui/Card"
 import { Button } from "../buttons/Buttons"
 import { Link } from "react-router-dom"
-
-const categories = ["Todos", "Branding", "Web", "Redes Sociales", "Publicidad"]
+import SoloWebinar from '../../assets/img/work/SoloWebianar.png'
+import gym from '../../assets/img/work/gym.png'
+import solowebinarlogo from '../../assets/img/work/SoloWebinarLogoBlanco.png'
+import serenity from '../../assets/img/work/SerenityLogo1.png'
+import campana from '../../assets//img/work/Campana.png'
+const categories = ["Todos", "Branding", "Web", "Redes Sociales"
+  // ,"Publicidad"
+  ]
 
 const portfolioItems = [
   {
     id: 1,
-    title: "Rediseño de marca para Eco Solutions",
+    title: "Rediseño de Logo para Solo Webinar",
     category: "Branding",
-    image: "/placeholder.svg?height=600&width=800",
+    image: solowebinarlogo,
   },
   {
     id: 2,
-    title: "Sitio web para Tech Innovations",
+    title: "Sitio web de SoloWebinars",
     category: "Web",
-    image: "/placeholder.svg?height=600&width=800",
+    image:SoloWebinar
   },
   {
     id: 3,
     title: "Campaña en redes para Fashion Store",
     category: "Redes Sociales",
-    image: "/placeholder.svg?height=600&width=800",
+    image: campana,
   },
-  {
-    id: 4,
-    title: "Campaña publicitaria para Healthy Foods",
-    category: "Publicidad",
-    image: "/placeholder.svg?height=600&width=800",
-  },
+  // {
+  //   id: 4,
+  //   title: "Campaña publicitaria para Healthy Foods",
+  //   category: "Publicidad",
+  //   image: "/placeholder.svg?height=600&width=800",
+  // },
   {
     id: 5,
-    title: "Identidad corporativa para Finance Pro",
+    title: "Identidad corporativa para Serenity AI",
     category: "Branding",
-    image: "/placeholder.svg?height=600&width=800",
+    image:serenity,
   },
   {
     id: 6,
-    title: "E-commerce para Artisan Crafts",
+    title: "Diseño y creacion de Página web de gimnasio",
     category: "Web",
-    image: "/placeholder.svg?height=600&width=800",
+    image: gym,
   },
 ]
 export default function PortfolioPreview() {
@@ -174,7 +180,7 @@ export default function PortfolioPreview() {
               <CardContent className="p-0">
                 <div className="relative h-64 overflow-hidden">
                   <img
-                    src={item.image || "/placeholder.svg"}
+                    src={item.image}
                     alt={item.title}
                     width={800}
                     height={600}
@@ -186,12 +192,12 @@ export default function PortfolioPreview() {
                         {item.category}
                       </span>
                       <h3 className="text-lg font-bold">{item.title}</h3>
-                      <Button variant="ghost" size="sm" asChild className="mt-2 group">
+                      {/* <Button variant="ghost" size="sm" asChild className="mt-2 group">
                         <Link to={`/portafolio/${item.id}`} className="flex items-center">
                           Ver proyecto
                           <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                         </Link>
-                      </Button>
+                      </Button> */}
                     </div>
                   </div>
                 </div>

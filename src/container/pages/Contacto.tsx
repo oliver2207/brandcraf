@@ -20,6 +20,9 @@ if (typeof window !== "undefined") {
 }
 
 export default function ContactoPage() {
+    useEffect(()=>{
+    window.scroll(0,0)
+  },[])
   const [formState, setFormState] = useState({
     nombre: "",
     email: "",
@@ -405,10 +408,24 @@ export default function ContactoPage() {
             </h2>
 
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Agenda una llamada con uno de nuestros expertos para discutir tu proyecto sin compromiso.
+              Agenda una Cita con uno de nuestros expertos para discutir tu proyecto sin compromiso.
             </p>
 
-            <Button className="btn-gradient text-lg px-8 py-6">Agendar una llamada</Button>
+            {/* <Button className="btn-gradient text-lg px-8 py-6">
+              
+              Agendar una Cita
+
+            </Button> */}
+            <Button variant="outline" className="text-lg px-8 py-6">
+                <a
+                  href="https://wa.me/+50762301894?text=Hola%2C%20me%20interesa%20más%20información%20sobre%20tus%20servicios"
+                  rel="noopener noreferrer"
+
+                >
+                  Solicita tu propuesta
+
+                </a>
+              </Button>
           </div>
         </div>
       </section>

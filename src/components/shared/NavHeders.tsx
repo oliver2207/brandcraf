@@ -1,10 +1,10 @@
- 
+
 import { Link } from 'react-router-dom';
- 
- import  bandcraft from '../../assets/img/Brandcraft_LETRAS+TEXTO.png';
+
+import bandcraft from '../../assets/img/Brandcraft_LETRAS+TEXTO.png';
 import { cn } from '../../lib/utils';
- import {  Menu, X } from 'lucide-react';
- import { useEffect, useState } from 'react';
+import { Menu, X } from 'lucide-react';
+import { useEffect, useState } from 'react';
 import { Button } from '../buttons/Buttons';
 
 // const navigation = [
@@ -14,12 +14,12 @@ import { Button } from '../buttons/Buttons';
 //     // { id: 'paquetes', title: 'Paquetes', href: '/services2', current: false },
 //     // { id: 'Price', title: 'Blog', current: false },
 //     // { id: 'Presentecion', title: 'Contact', href: '/', current: false },
-     
+
 
 // ]
- 
+
 function NavHeaders() {
-      const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -50,10 +50,10 @@ function NavHeaders() {
     setIsOpen(!isOpen)
   }
 
-  
-    return (
 
-       <header
+  return (
+
+    <header
       className={cn(
         "header fixed top-0 w-full z-[100] transition-all duration-300 md:px-12",
         scrolled ? "bg-gray-900 bg-opacity-20 backdrop-blur-md shadow-lg py-2" : "bg-transparent py-4",
@@ -61,7 +61,7 @@ function NavHeaders() {
     >
       <div className="container flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 mx-3">
-        <img src={bandcraft}  className=' w-36 h-14 md:w-28 md:h-12' alt="" />
+          <img src={bandcraft} className=' w-36 h-14 md:w-28 md:h-12' alt="" />
         </Link>
 
         {/* Desktop Navigation */}
@@ -101,14 +101,14 @@ function NavHeaders() {
           {/* <Link to="/nosotros" className="text-sm font-medium hover:text-primary transition-colors">
             Nosotros
           </Link> */}
-{/* 
+          {/* 
           <Link to="/blog" className="text-sm font-medium hover:text-primary transition-colors">
             Blog
           </Link> */}
 
-          <Link to="/precios" className="text-sm font-medium hover:text-primary transition-colors">
+          {/* <Link to="/precios" className="text-sm font-medium hover:text-primary transition-colors">
             Precios
-          </Link>
+          </Link> */}
 
           <Link to="/contacto" className="text-sm font-medium hover:text-primary transition-colors">
             Contacto
@@ -116,7 +116,16 @@ function NavHeaders() {
         </nav>
 
         <div className="hidden md:block">
-          <Button className="btn-gradient">Agenda tu cita</Button>
+          <Button className="btn-gradient mt-4 w-full">
+            <a
+              href="https://wa.me/+50762301894?text=Hola%2C%20me%20interesa%20más%20información%20sobre%20tus%20servicios"
+              target="_blank"
+              rel="noopener noreferrer"
+
+            >
+              Cotizar
+            </a>
+          </Button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -222,14 +231,22 @@ function NavHeaders() {
             Contacto
           </Link>
 
-          <Button className="btn-gradient mt-4 w-full">Agenda tu cita</Button>
+          <Button className="btn-gradient mt-4 w-full">
+            <a
+              href="https://wa.me/50762301894?text=Hola%2C%20me%20interesa%20más%20información%20sobre%20tus%20servicios"
+              
+              rel="noopener noreferrer"
+
+            >
+              Cotizar
+            </a>
+          </Button>
         </nav>
       </div>
     </header>
 
-    )
+  )
 }
- 
 
-export default   NavHeaders
- 
+
+export default NavHeaders

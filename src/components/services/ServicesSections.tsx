@@ -1,9 +1,18 @@
 "use client"
  
-import { Palette, Globe, Share2, TrendingUp, Users, ArrowRight } from "lucide-react"
+import { Palette, Globe, Share2, 
+  // TrendingUp,
+  Users, 
+  // ArrowRight
+ } from "lucide-react"
+import branding from '../../assets/img/services/Branding.png'
+import branding2 from '../../assets/img/services/Branding2.png'
+import socialmedia from '../../assets/img/services/SocialMedia.png'
+import consultoria from '../../assets/img/services/BusineSplan.png'
 import { Button } from "../buttons/Buttons"
 import { Link } from "react-router-dom"
 import { Card, CardContent } from "../ui/Card"
+
 
 export default function ServicesSection() {
   return (
@@ -18,12 +27,12 @@ export default function ServicesSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <Card className="animate-on-scroll stagger-item service-card border-gradient card-gradient overflow-hidden group">
             <CardContent className="p-0">
               <div className="relative h-48 overflow-hidden">
                 <img
-                  src="/placeholder.svg?height=400&width=600"
+                  src={branding}
                   alt="Diseño Web"
                   width={600}
                   height={400}
@@ -54,12 +63,12 @@ export default function ServicesSection() {
                     Formularios y automatizaciones
                   </li>
                 </ul>
-                <Button variant="ghost" size="sm" asChild className="group">
+                {/* <Button variant="ghost" size="sm" asChild className="group">
                   <Link to="/servicios/diseno-web" className="flex items-center">
                     Ver más
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Link>
-                </Button>
+                </Button> */}
               </div>
             </CardContent>
           </Card>
@@ -68,7 +77,7 @@ export default function ServicesSection() {
             <CardContent className="p-0">
               <div className="relative h-48 overflow-hidden">
                 <img
-                  src="/placeholder.svg?height=400&width=600"
+                  src={ branding2}
                   alt="Branding"
                   width={600}
                   height={400}
@@ -86,10 +95,7 @@ export default function ServicesSection() {
                     <span className="h-1.5 w-1.5 rounded-full bg-secondary mr-2"></span>
                     Diseño de logos
                   </li>
-                  <li className="flex items-center text-sm">
-                    <span className="h-1.5 w-1.5 rounded-full bg-secondary mr-2"></span>
-                    Manual de marca
-                  </li>
+                
                   <li className="flex items-center text-sm">
                     <span className="h-1.5 w-1.5 rounded-full bg-secondary mr-2"></span>
                     Paleta de colores
@@ -98,13 +104,19 @@ export default function ServicesSection() {
                     <span className="h-1.5 w-1.5 rounded-full bg-secondary mr-2"></span>
                     Tipografía y elementos gráficos
                   </li>
+                    <li className="flex items-center text-sm">
+                    <span></span>
+                    <span className="h-1.5 w-1.5 rounded-full bg-secondary mr-2"></span>
+                    Manual de marca
+                  </li>
+                  
                 </ul>
-                <Button variant="ghost" size="sm" asChild className="group">
+                {/* <Button variant="ghost" size="sm" asChild className="group">
                   <Link to="/servicios/branding" className="flex items-center">
                     Ver más
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Link>
-                </Button>
+                </Button> */}
               </div>
             </CardContent>
           </Card>
@@ -113,7 +125,7 @@ export default function ServicesSection() {
             <CardContent className="p-0">
               <div className="relative h-48 overflow-hidden">
                 <img
-                  src="/placeholder.svg?height=400&width=600"
+                  src={socialmedia}
                   alt="Redes Sociales"
                   width={600}
                   height={400}
@@ -144,16 +156,16 @@ export default function ServicesSection() {
                     Gestión de comunidad
                   </li>
                 </ul>
-                <Button variant="ghost" size="sm" asChild className="group">
+                {/* <Button variant="ghost" size="sm" asChild className="group">
                   <Link to="/servicios/redes-sociales" className="flex items-center">
                     Ver más
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Link>
-                </Button>
+                </Button> */}
               </div>
             </CardContent>
           </Card>
-
+{/* 
           <Card className="animate-on-scroll stagger-item service-card border-gradient card-gradient overflow-hidden group">
             <CardContent className="p-0">
               <div className="relative h-48 overflow-hidden">
@@ -197,13 +209,13 @@ export default function ServicesSection() {
                 </Button>
               </div>
             </CardContent>
-          </Card>
+          </Card> */}
 
           <Card className="animate-on-scroll stagger-item service-card border-gradient card-gradient overflow-hidden group">
             <CardContent className="p-0">
               <div className="relative h-48 overflow-hidden">
                 <img
-                  src="/placeholder.svg?height=400&width=600"
+                  src={consultoria}
                   alt="Consultoría"
                   width={600}
                   height={400}
@@ -234,12 +246,12 @@ export default function ServicesSection() {
                     Plan de acción personalizado
                   </li>
                 </ul>
-                <Button variant="ghost" size="sm" asChild className="group">
+                {/* <Button variant="ghost" size="sm" asChild className="group">
                   <Link to="/servicios/consultoria" className="flex items-center">
                     Ver más
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Link>
-                </Button>
+                </Button> */}
               </div>
             </CardContent>
           </Card>

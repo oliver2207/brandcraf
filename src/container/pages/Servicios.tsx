@@ -6,14 +6,18 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
  
 import { Palette, Globe, Share2, TrendingUp, Users,   CheckCircle } from "lucide-react"
-import { Button } from "../../components/buttons/Buttons"
+// import { Button } from "../../components/buttons/Buttons"
 import { Card, CardContent } from "../../components/ui/Card"
+import CtaSection from "../../components/Home/CtaSections"
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger)
 }
 
 export default function ServiciosPage() {
+    useEffect(()=>{
+    window.scroll(0,0)
+  },[])
   const heroRef = useRef<HTMLDivElement>(null)
   const servicesRef = useRef<HTMLDivElement>(null)
 
@@ -559,7 +563,7 @@ export default function ServiciosPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-muted/10">
+      {/* <section className="py-20 bg-muted/10">
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -579,7 +583,8 @@ export default function ServiciosPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+      <CtaSection/>
     </div>
   )
 }

@@ -25,10 +25,17 @@ export default function HeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button className="hero-cta btn-gradient text-lg px-8 py-6">Agenda tu cita</Button>
+            {/* <Button className="hero-cta btn-gradient text-lg px-8 py-6">Agenda tu cita</Button> */}
 
             <Button className="hero-cta bg-black border border-amber-50 variant-outline text-lg px-8 py-6" variant="outline">
-              Solicita tu propuesta
+                   <a
+              href="https://wa.me/+50762301894?text=Hola%2C%20me%20interesa%20más%20información%20sobre%20tus%20servicios"
+               rel="noopener noreferrer"
+
+            >
+                             Solicita tu propuesta
+
+            </a>
             </Button>
 
             <Button className="hero-cta variant-ghost text-lg" variant="ghost" asChild>
