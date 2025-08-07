@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 import Layouts from "../layout/Layouts";
 import HomePage from "../container/pages/HomePage";
 import ContactoPage from "../container/pages/Contacto";
@@ -24,7 +24,7 @@ export const router = createBrowserRouter([
 		],
 	},{
 
-		path: '*',
-		element: <div>404 Not Found</div>,
+		path: '/*',
+		element: <Navigate to="/" replace />,
 	},
 ]);
