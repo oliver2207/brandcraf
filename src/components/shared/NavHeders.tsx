@@ -95,7 +95,7 @@ function NavHeaders() {
             </DropdownMenuContent>
           </DropdownMenu> */}
 
-          <Link to="/Servicios" className="text-sm font-medium hover:text-primary transition-colors">
+          <Link to="/servicios" className="text-sm font-medium hover:text-primary transition-colors">
             Servicios
           </Link>
           {/* <Link to="/nosotros" className="text-sm font-medium hover:text-primary transition-colors">
