@@ -9,6 +9,7 @@ import { Palette, Globe, Share2, TrendingUp, Users,   CheckCircle } from "lucide
 // import { Button } from "../../components/buttons/Buttons"
 import { Card, CardContent } from "../../components/ui/Card"
 import CtaSection from "../../components/Home/CtaSections"
+import SEO from "../../components/seo/SEO"
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger)
@@ -59,6 +60,10 @@ export default function ServiciosPage() {
 
   return (
     <div className="px-5 md:px-12">
+        <SEO
+        title="Servicios de Branding y Marketing | BrandCraft"
+        description="Diseño de logotipos, creación de landing pages y estrategias de branding digital."
+      />
       {/* Hero Section */}
       <section ref={heroRef} className="relative pt-32 pb-20 overflow-hidden ">
         {/* Background shapes */}

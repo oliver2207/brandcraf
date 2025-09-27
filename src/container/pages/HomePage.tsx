@@ -10,6 +10,7 @@ import PortfolioPreview from "../../components/Home/PortFolio"
 // import BlogPreview from "../../components/blog/BlogPreview"
 import CtaSection from "../../components/Home/CtaSections"
 import { useEffect } from "react"
+import SEO from "../../components/seo/SEO"
 
 
 
@@ -20,6 +21,10 @@ function HomePage() {
   },[])
   return (
     <>
+     <SEO
+        title="BrandCraft | Creamos Landing Pages y Logos Profesionales"
+        description="Agencia de branding que diseña landing pages y logotipos que convierten visitantes en clientes."
+      />
       <HeroSection />
 
       <section className="py-20 bg-black px-12">
@@ -129,6 +134,8 @@ function HomePage() {
       {/* <BlogPreview /> */}
       {/* Cta */}
    <CtaSection/>
+
+   
     </>
   )
 }

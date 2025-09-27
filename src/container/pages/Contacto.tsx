@@ -14,6 +14,7 @@ import { Textarea } from "../../components/ui/textarea"
 import { Button } from "../../components/buttons/Buttons"
 import { Select, SelectContent, SelectItem, SelectValue } from "../../components/ui/Select"
 import { SelectTrigger } from "@radix-ui/react-select"
+import SEO from "../../components/seo/SEO"
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger)
@@ -154,6 +155,13 @@ export default function ContactoPage() {
 
   return (
     <div className="px-5 md:px-12">
+       <SEO
+        title="Contacto | BrandCraft - Agencia de Branding y Marketing"
+        description="Ponte en contacto con BrandCraft. Solicita tu propuesta de branding, diseño de logotipos o creación de landing pages que potencien tu marca."
+        keywords="contacto branding, contacto agencia de marketing, contacto diseño de logos, contacto landing page"
+        url="https://www.brandcraft.tech/contacto"
+        
+      />
       {/* Hero Section */}
       <section ref={heroRef} className="relative pt-32 pb-20 overflow-hidden ">
         {/* Background shapes */}
