@@ -56,7 +56,7 @@ function NavHeaders() {
     <header
       className={cn(
         "header fixed top-0 w-full z-[100] transition-all duration-300 md:px-12",
-        scrolled ? "bg-gray-900 bg-opacity-20 backdrop-blur-md shadow-lg py-2" : "bg-transparent py-4",
+        scrolled ? "bg-gray-900 bg-opacity-20 backdrop-blur-md shadow-lg py-2" : "bg-transparent py-2",
       )}
     >
       <div className="container flex items-center justify-between">
@@ -141,10 +141,14 @@ function NavHeaders() {
       {/* Mobile Navigation */}
       <div
         className={cn(
-          "fixed inset-0 top-14 mt-10 z-40 transform transition-transform duration-300 ease-in-out md:hidden",
+          "fixed inset-0 top-14 mt-3.5 bg-black min-h-screen z-40 transform transition-transform duration-300 ease-in-out md:hidden",
           isOpen ? "translate-x-0" : "translate-x-full",
         )}
       >
+         {/* className={cn(
+          "fixed inset-0 top-14 mt-10 z-40 transform transition-transform duration-300 ease-in-out md:hidden",
+          isOpen ? "translate-x-0" : "translate-x-full",
+        )} */}
         <nav className="flex flex-col p-6 space-y-4  bg-black text-white  ">
           <Link to="/" className="text-lg font-medium py-2 hover:text-primary transition-colors" onClick={toggleMenu}>
             Inicio
@@ -233,10 +237,9 @@ function NavHeaders() {
 
           <Button className="btn-gradient mt-4 w-full">
             <a
-              href="https://wa.me/50762301894?text=Hola%2C%20me%20interesa%20más%20información%20sobre%20tus%20servicios"
+              href="https://wa.me/+50762301894?text=Hola%2C%20me%20interesa%20más%20información%20sobre%20tus%20servicios"
               
-              rel="noopener noreferrer"
-
+            
             >
               Cotizar
             </a>

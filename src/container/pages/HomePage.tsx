@@ -27,7 +27,7 @@ function HomePage() {
       />
       <HeroSection />
 
-      <section className="py-20 bg-black px-12">
+      <section className="py-20 bg-black px-12"> 
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="animate-on-scroll text-3xl md:text-4xl font-bold mb-4">
